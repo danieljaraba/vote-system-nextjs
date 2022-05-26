@@ -1,42 +1,26 @@
 [
     {
-        "name":"GUSTAVO PETRO",
-        "url":"https://upload.wikimedia.org/wikipedia/commons/e/ef/GustavoPetro_%28cropped%29.jpg"
+        "plink":"link here",
+        "vlink":"link here"
     },
     {
-        "name":"FRANCIA MÁRQUEZ MINA",
-        "url":"https://pbs.twimg.com/profile_images/1520376933086810117/HbhMjxDZ_400x400.jpg"
+        "plink":"https://upload.wikimedia.org/wikipedia/commons/e/ef/GustavoPetro_%28cropped%29.jpg",
+        "vlink":"https://pbs.twimg.com/profile_images/1520376933086810117/HbhMjxDZ_400x400.jpg"
     },
     {
-        "name":"RODOLFO HERNÁNDEZ",
-        "url":"https://portafolio.co/files/article_content/uploads/2022/02/09/62044ef0bc0fc.jpeg"
+        "plink":"https://portafolio.co/files/article_content/uploads/2022/02/09/62044ef0bc0fc.jpeg",
+        "vlink":"https://cursos.iadb.org/sites/default/files/2020-08/Dr.-Marelen%20Castillo.jpg"
     },
     {
-        "name":"MARELEN CASTILLO",
-        "url":"https://cursos.iadb.org/sites/default/files/2020-08/Dr.-Marelen%20Castillo.jpg"
+        "plink":"https://www.laopinion.com.co/sites/default/files/2022-05/Jhon-milton.jpg",
+        "vlink":"http://hsbnoticias.com/sites/default/files/2022-04/Sandra.jpg"
     },
     {
-        "name":"JOHN MILTON RODRÍGUEZ",
-        "url":"https://pbs.twimg.com/profile_images/1520376933086810117/HbhMjxDZ_400x400.jpg"
+        "plink":"https://www.portafolio.co/files/article_multimedia/uploads/2022/02/20/6212adc9910de.jpeg",
+        "vlink":"https://pbs.twimg.com/profile_images/1357177351466024965/C3ssZqIF_400x400.jpg"
     },
     {
-        "name":"SANDRA DE LAS LAJAS TORRES",
-        "url":"https://pbs.twimg.com/profile_images/1520376933086810117/HbhMjxDZ_400x400.jpg"
-    },
-    {
-        "name":"FEDERICO GUTIÉRREZ",
-        "url":"https://pbs.twimg.com/profile_images/1520376933086810117/HbhMjxDZ_400x400.jpg"
-    },
-    {
-        "name":"RODRIGO LARA",
-        "url":"https://pbs.twimg.com/profile_images/1520376933086810117/HbhMjxDZ_400x400.jpg"
-    },
-    {
-        "name":"SERGIO FAJARDO",
-        "url":"https://pbs.twimg.com/profile_images/1520376933086810117/HbhMjxDZ_400x400.jpg"
-    },
-    {
-        "name":"LUIS GILBERTO MURILLO",
-        "url":"https://pbs.twimg.com/profile_images/1520376933086810117/HbhMjxDZ_400x400.jpg"
+        "plink":"https://cloudfront-us-east-1.images.arcpublishing.com/semana/ROSC5HZRYNBXRGDZPTA726TT24.jpg",
+        "vlink":"https://upload.wikimedia.org/wikipedia/commons/e/e9/Luis_Gabriel_Murillo.jpg"
     }
 ]

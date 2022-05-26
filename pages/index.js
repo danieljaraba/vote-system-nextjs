@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import Tarjeta from '../components/Tarjeta'
 import {Box, Paper, Container} from '@mui/material'
-//import data from '../public/data.json'
+import urls from '../public/assets/urls.json'
 
 function index({names}) {
     return(
@@ -23,10 +23,8 @@ function index({names}) {
                     {names.map((item) => (
                         <Tarjeta
                             pname={item.presidente} vname={item.vicepresidente}
-                            /*
-                            plink={item.plink}
-                            vlink={item.vlink}
-                            */
+                            plink={urls[parseInt(item.id)].plink}
+                            vlink={urls[parseInt(item.id)].vlink}
                             id={item.id}
                             key={item.id}
                         />

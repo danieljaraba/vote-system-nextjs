@@ -1,15 +1,33 @@
-import {Card, Stack, Button, CardActions} from '@mui/material'
+import * as React from 'react';
+import { useRouter } from 'next/router'
+import { Card, Stack, Button, CardActions, Alert, AlertTitle, Snackbar } from '@mui/material'
 
-function Tarjeta(props){
-    return(
-        <Card sx={{maxWidth:300,my:2}}>
+function Tarjeta(props) {
+    const [open, setOpen] = React.useState(false);
+    const router = useRouter()
+
+    const handleClick = async () => {
+        setOpen(true);
+        fetch(`http://localhost:3000/api/votar/${props.id}`,{method:'POST'})
+        setTimeout(() => { router.push("/results")},3000)
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+    return (
+        <Card sx={{ maxWidth: 300, my: 2 }}>
             <Stack direction="row">
                 <div>
                     <div>
                         <img
                             src={props.plink}
-                            width={150}
-                            height={180}
+                            style={{ width: 150, height: 180, objectFit: "cover" }}
                         />
                     </div>
                     <div>
@@ -25,8 +43,7 @@ function Tarjeta(props){
                     <div>
                         <img
                             src={props.vlink}
-                            width={150}
-                            height={180}
+                            style={{ width: 150, height: 180, objectFit: "cover" }}
                         />
                     </div>
                     <div>
@@ -39,11 +56,15 @@ function Tarjeta(props){
                     </div>
                 </div>
             </Stack>
-            <CardActions sx={{justifyContent:"center"}}>
-                <Button variant="contained" onClick={() =>{
-                    alert(`Se presionó el boton ${props.id}`)
-                }}>VOTAR</Button>
+            <CardActions sx={{ justifyContent: "center" }}>
+                <Button variant="contained" onClick={handleClick}>VOTAR</Button>
             </CardActions>
+            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                <Alert severity="success">
+                    <AlertTitle>Exitoso</AlertTitle>
+                    Voto registrado exitosamente — <strong>¡Redirigiendo!</strong>
+                </Alert>
+            </Snackbar>
         </Card>
     )
 }
