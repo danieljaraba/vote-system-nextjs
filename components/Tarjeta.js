@@ -20,53 +20,84 @@ function Tarjeta(props) {
         setOpen(false);
     };
 
-    return (
-        <Card sx={{ maxWidth: 300, my: 2 }}>
-            <Stack direction="row">
-                <div>
-                    <div>
-                        <img
-                            src={props.plink}
-                            style={{ width: 150, height: 180, objectFit: "cover" }}
-                        />
-                    </div>
+    if(props.pname != props.vname){
+        return (
+            <Card sx={{ maxWidth: 300, my: 2 }}>
+                <Stack direction="row">
                     <div>
                         <div>
-                            <h5>PRESIDENTE</h5>
+                            <img
+                                src={props.plink}
+                                style={{ width: 150, height: 180, objectFit: "cover" }}
+                            />
                         </div>
                         <div>
-                            <h5>{props.pname}</h5>
+                            <div>
+                                <h5>PRESIDENTE</h5>
+                            </div>
+                            <div>
+                                <h5>{props.pname}</h5>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <img
-                            src={props.vlink}
-                            style={{ width: 150, height: 180, objectFit: "cover" }}
-                        />
                     </div>
                     <div>
                         <div>
-                            <h5>VICEPRESIDENTE</h5>
+                            <img
+                                src={props.vlink}
+                                style={{ width: 150, height: 180, objectFit: "cover" }}
+                            />
                         </div>
                         <div>
-                            <h5>{props.vname}</h5>
+                            <div>
+                                <h5>VICEPRESIDENTE</h5>
+                            </div>
+                            <div>
+                                <h5>{props.vname}</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </Stack>
-            <CardActions sx={{ justifyContent: "center" }}>
-                <Button variant="contained" onClick={handleClick}>VOTAR</Button>
-            </CardActions>
-            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-                <Alert severity="success">
-                    <AlertTitle>Exitoso</AlertTitle>
-                    Voto registrado exitosamente — <strong>¡Redirigiendo!</strong>
-                </Alert>
-            </Snackbar>
-        </Card>
-    )
+                </Stack>
+                <CardActions sx={{ justifyContent: "center" }}>
+                    <Button variant="contained" onClick={handleClick}>VOTAR</Button>
+                </CardActions>
+                <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                    <Alert severity="success">
+                        <AlertTitle>Exitoso</AlertTitle>
+                        Voto registrado exitosamente — <strong>¡Redirigiendo!</strong>
+                    </Alert>
+                </Snackbar>
+            </Card>
+        )
+    }else{
+        return (
+            <Card sx={{ maxWidth: 300, my: 2 }}>
+                <Stack direction="row">
+                    <div>
+                        <div>
+                            <img
+                                src={props.plink}
+                                style={{ width: 300, height: 180, objectFit: "cover" }}
+                            />
+                        </div>
+                        <div>
+                            <div>
+                                <h1>{props.pname}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </Stack>
+                <CardActions sx={{ justifyContent: "center" }}>
+                    <Button variant="contained" onClick={handleClick}>VOTAR</Button>
+                </CardActions>
+                <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                    <Alert severity="success">
+                        <AlertTitle>Exitoso</AlertTitle>
+                        Voto registrado exitosamente — <strong>¡Redirigiendo!</strong>
+                    </Alert>
+                </Snackbar>
+            </Card>
+        )
+    }
 }
 
 export default Tarjeta
